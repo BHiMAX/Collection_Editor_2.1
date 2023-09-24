@@ -57,8 +57,8 @@ class BHiMAX_AddObjectOperator(bpy.types.Operator):
                 obj.hide_render = True  # Set render visibility to off for newly added objects
         else:
             for obj in selected_objects:
-                obj.hide_viewport = False  # Set viewport visibility to on for newly added objects
-                obj.hide_render = collection.hide_render  # Set render visibility based on collection setting
+                obj.hide_viewport = False  # Set viewport visibility to on/off for newly added objects
+                obj.hide_render = False  # Set render visibility to on/off for newly added objects
         
         for obj in selected_objects:
             # Check if the object is already in the collection
